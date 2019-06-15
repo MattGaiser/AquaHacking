@@ -10,3 +10,13 @@ class PersonForm(ModelForm):
         age = IntegerField()
         skill_list = Skill.objects.all()
         skills = ModelMultipleChoiceField(widget=CheckboxSelectMultiple(),required=True, queryset=skill_list)
+
+class EmergencyForm(ModelForm):
+    class Meta:
+        model = Emergency
+        fields = '__all__'
+
+class TaskForm(ModelForm):
+    class Meta:
+        model = Task
+        fields = ['title', 'description', 'skill_needed', 'emergency']
