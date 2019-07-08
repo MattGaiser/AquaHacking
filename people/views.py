@@ -12,7 +12,7 @@ from plivo import plivoxml
 # Create your views here.
 @csrf_exempt
 def replySMS(request):
-    client = plivo.RestClient(auth_id='MAZTQ4YZCXZTRKNZUYNT', auth_token='NmY3ZjdkNTdjODEwY2E4OWI1NDVmNGI2Zjk1ZjM5')
+    client = plivo.RestClient(auth_id='', auth_token='')
     from_number = request.POST.get('From')
     text = request.POST.get('Text')
     text = text.lower()
